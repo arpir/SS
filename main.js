@@ -52,7 +52,7 @@ function ssGo() {
     document.querySelector(".header").className += ' issearch';
     document.querySelector("#ssInput").className += ' issearch';
 
-    deleteAll.style = "display:flex";
+    deleteAll.style = "display:none";
 
 
     let content = document.querySelector("#content");
@@ -92,7 +92,9 @@ function ssGo() {
         "www.zhiniw.com",
         "www.crackingcity.com"
     ];
-
+    
+    let requestsCompleted = 0; // 用于追踪已完成的请求数量
+    
     website.forEach(function (element) {
         myAjax("GET",
             "https://" + element + "/wp-json/wp/v2/posts?search=" + ssValue +
@@ -161,6 +163,7 @@ function ssGo() {
                     deleteAll.style = "display:none";
                     content.innerHTML = "<div style='text-align: center; margin-top: 50px;'>没有搜索到相关内容</div>";
                 }
+                
             },
             function (xhr) {
                 console.error("请求失败");
