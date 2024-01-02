@@ -57,10 +57,10 @@ function ssGo() {
 
     let content = document.querySelector("#content");
     content.innerHTML = "";
-
-
+    
     var ssValue = ssInput.value;
-
+    let hasResults = false; // 初始化为false
+    
     // var iterm = document.createElement("div");
     // iterm.className = "iterm-box";
     // iterm.className += " iterm-box-delete";
@@ -105,7 +105,8 @@ function ssGo() {
 
                     let checkTitle = new RegExp(ssValue, "i");
                     if (checkTitle.test(strArticle.title.rendered)) {
-
+                        
+                        hasResults = true; // 有搜索结果时更新标志
                         let matchTitle = strArticle.title.rendered.match(checkTitle);
                         let replaceTitle = strArticle.title.rendered.replace(checkTitle,
                             `<span class="highlight";>${matchTitle}</span>`);
@@ -154,8 +155,12 @@ function ssGo() {
                         break;
                     }
                 }
-
-
+                
+                if (!hasResults) {
+                    // 没有搜索到相关内容时的处理
+                    deleteAll.style = "display:none";
+                    content.innerHTML = "<div style='text-align: center; margin-top: 50px;'>没有搜索到相关内容</div>";
+                }
             },
             function (xhr) {
                 console.error("请求失败");
