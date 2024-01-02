@@ -90,6 +90,7 @@ function ssGo() {
         "www.chenbo.info",
         "www.macyy.cn",
         "www.zhiniw.com",
+        "x1g.la",
         "www.crackingcity.com"
     ];
     
