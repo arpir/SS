@@ -91,6 +91,7 @@ function ssGo() {
         "www.macyy.cn",
         "www.zhiniw.com",
         "x1g.la",
+        "www.ahhhhfs.com",
         "www.crackingcity.com"
     ];
     
