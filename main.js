@@ -92,6 +92,7 @@ function ssGo() {
         "www.zhiniw.com",
         "x1g.la",
         "www.ahhhhfs.com",
+        "www.uy5.net",
         "www.crackingcity.com"
     ];
     
