@@ -69,8 +69,6 @@ function ssGo() {
     //     `正在搜索，请稍等......`;
 
     let website = [
-        "foxirj.com",
-        "www.appinn.com",
         "www.ghxi.com",
         "www.luochenzhimu.com",
         "www.macyy.cn",
@@ -79,7 +77,6 @@ function ssGo() {
         "www.torrentmac.net",
         "www.yxssp.com",
         "fy6b.com",
-        "www.sdifen.com",
         "igetintopc.com",
         "www.sadeempc.com",
         "haxnode.net",
